@@ -1,3 +1,12 @@
+/* Estilo do banner com gradiente */
+.banner {
+    background: linear-gradient(to right, #1F2544, #474F7A, #81689D, #FFD0EC);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
 /* Estilo para o cabeçalho */
 header {
     background-color: #A0D391;
