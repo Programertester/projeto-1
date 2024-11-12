@@ -3,20 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LivrosDani</title>
+    <title>AluraNature</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
 </head>
 <body>
-    <!-- Cabeçalho com menu, login, favoritos e carrinho -->
+    <!-- Cabeçalho -->
     <header>
-        <div class="logo">LivrosOnline</div>
-        <nav>
-                <li>Início</li>
-                <li>Livros</li>
-                <li>Gêneros</li>
-                <li>Contato</li>
-            </ul>
-        </nav>
+        <div class="logo">AluraNature</div>
         <div class="header-icons">
             <span class="icon">
                 <img src="favorite.svg" alt="Favorito" id="favorite-icon">
@@ -31,23 +24,16 @@
         </div>
     </header>
 
-    <!-- Barra de Pesquisa -->
-    <div class="search-bar">
-        <input type="text" placeholder="Qual será sua próxima leitura?" />
-        <button><img src="search.svg" alt="Lupa" class="icon"></button>
-    </div>
-
-    <!-- Galeria de Livros com Setas -->
-    <section class="book-gallery">
-        <button class="arrow left-arrow" onclick="moveLeft()">⬅</button>
-        <div class="book-container">
-            <img src="livro1.jpg" alt="Livro 1">
-            <img src="livro2.jpg" alt="Livro 2">
-            <img src="livro3.jpg" alt="Livro 3">
-            <img src="livro4.jpg" alt="Livro 4">
-            <img src="livro5.jpg" alt="Livro 5">
+    <!-- Área principal com texto e barra de pesquisa -->
+    <section class="main-section">
+        <h1>Conecte-se com a natureza</h1>
+        <p>Explore o mundo natural com nossos e-books e conteúdos especializados!</p>
+        
+        <!-- Barra de Pesquisa -->
+        <div class="search-bar">
+            <input type="text" placeholder="Qual será sua próxima leitura verde?" />
+            <button><img src="search.svg" alt="Lupa" class="icon"></button>
         </div>
-        <button class="arrow right-arrow" onclick="moveRight()">➡</button>
     </section>
 
     <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
