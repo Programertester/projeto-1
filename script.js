@@ -22,7 +22,13 @@ cartIcon.addEventListener("click", () => {
     cartCount.textContent = itemCount;
     alert("Item adicionado ao carrinho! Total: " + itemCount);
 });
+// Exemplo de código para incrementar o contador do carrinho
+let cartCount = 0;
 
+document.getElementById("cart-icon").addEventListener("click", () => {
+    cartCount++;
+    document.getElementById("cart-count").textContent = cartCount;
+});
 // Funções para mover os livros
 let scrollAmount = 0;
 const bookContainer = document.querySelector(".book-container");
