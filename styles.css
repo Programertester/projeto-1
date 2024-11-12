@@ -7,18 +7,6 @@
     font-size: 24px;
     font-weight: bold;
 }
-/* Estilo para o cabeçalho */
-header {
-    background-color: #A0D391;
-    color: #333;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 18px;
-    font-weight: bold;
-}
-
 /* Estilo do logo */
 .logo {
     font-size: 24px;
@@ -37,15 +25,6 @@ header {
     height: 24px;
     cursor: pointer;
 }
-
-/* Área principal com texto centralizado e fundo */
-.main-section {
-    background-color: #4CAF50;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 60px 20px;
-}
-
 .main-section h1 {
     font-size: 36px;
     margin-bottom: 10px;
