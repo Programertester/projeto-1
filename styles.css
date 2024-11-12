@@ -1,3 +1,10 @@
+/* Cor de fundo do body */
+body {
+    background-color: #DFB6B2;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Adicionei uma fonte padrão, você pode mudar se quiser */
+}
+
 /* Estilo do banner com gradiente */
 .banner {
     background: linear-gradient(to right, #1F2544, #474F7A, #81689D, #FFD0EC);
@@ -7,6 +14,7 @@
     font-size: 24px;
     font-weight: bold;
 }
+
 /* Estilo do logo */
 .logo {
     font-size: 24px;
@@ -25,6 +33,7 @@
     height: 24px;
     cursor: pointer;
 }
+
 .main-section h1 {
     font-size: 36px;
     margin-bottom: 10px;
