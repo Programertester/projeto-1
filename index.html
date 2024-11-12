@@ -3,21 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabeçalho Colorido</title>
+    <title>Cabeçalho Funcional</title>
     <style>
+        /* Estilo para o cabeçalho */
         header {
             background-color: #FFD0EC;
             color: #333;
             padding: 20px;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             font-size: 24px;
             font-weight: bold;
+        }
+
+        /* Estilo para os ícones e botão */
+        .icon {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Estilo do contador do carrinho */
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+
+        /* Estilo para o menu dropdown */
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            background-color: #FFD0EC;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu ul li {
+            padding: 8px 0;
+            cursor: pointer;
+        }
+
+        .menu ul li:hover {
+            background-color: #f0c4dc;
         }
     </style>
 </head>
 <body>
+    <!-- Cabeçalho com menu, login, favoritos e carrinho -->
     <header>
-        Bem-vindo ao meu site!
+        <div id="menu-icon" class="icon">☰</div>
+        <div>Meu Site</div>
+        <div>
+            <span id="favorite-icon" class="icon">❤</span>
+            <span id="login-icon" class="icon">👤</span>
+            <span id="cart-icon" class="icon">🛒<span id="cart-count" class="cart-count">0</span></span>
+        </div>
     </header>
+
+    <!-- Menu Dropdown -->
+    <div id="menu" class="menu">
+        <ul>
+            <li>Home</li>
+            <li>Sobre</li>
+            <li>Contato</li>
+        </ul>
+    </div>
+
+    <script>
+        // Função para alternar o menu
+        const menuIcon = document.getElementById("menu-icon");
+        const menu = document.getElementById("menu");
+        menuIcon.addEventListener("click", () => {
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+
+        // Função para alternar o estado de favorito
+        const favoriteIcon = document.getElementById("favorite-icon");
+        let isFavorited = false;
+        favoriteIcon.addEventListener("click", () => {
+            isFavorited = !isFavorited;
+            favoriteIcon.textContent = isFavorited ? "💖" : "❤";
+            alert(isFavorited ? "Adicionado aos favoritos!" : "Removido dos favoritos!");
+        });
+
+        // Função para simular login
+        const loginIcon = document.getElementById("login-icon");
+        loginIcon.addEventListener("click", () => {
+            alert("Você clicou no ícone de login!");
+        });
+
+        // Função para adicionar itens ao carrinho
+        const cartIcon = document.getElementById("cart-icon");
+        const cartCount = document.getElementById("cart-count");
+        let itemCount = 0;
+        cartIcon.addEventListener("click", () => {
+            itemCount++;
+            cartCount.textContent = itemCount;
+            alert("Item adicionado ao carrinho! Total: " + itemCount);
+        });
+    </script>
 </body>
 </html>
