@@ -1,6 +1,6 @@
 /* Estilo para o cabeçalho */
 header {
-    background-color: #FFD0EC;
+    background-color: #A0D391;
     color: #333;
     padding: 20px;
     display: flex;
@@ -10,37 +10,23 @@ header {
     font-weight: bold;
 }
 
-/* Estilo do menu de navegação centralizado */
-nav {
-    flex: 1;
+/* Estilo do logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para ícones do cabeçalho */
+.header-icons {
     display: flex;
-    justify-content: center;
+    gap: 20px;
 }
 
-nav ul.menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul.menu li {
-    cursor: pointer;
-    font-size: 18px;
-}
-
-/* Estilo para ícones */
-.header-icons .icon {
-    font-size: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    position: relative;
-}
-
-.header-icons img {
+.header-icons .icon img {
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 /* Estilo do contador do carrinho */
@@ -55,67 +41,49 @@ nav ul.menu li {
     font-size: 12px;
 }
 
+/* Área principal com texto e fundo */
+.main-section {
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.main-section h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.main-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
 /* Estilo para a barra de pesquisa */
 .search-bar {
-    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .search-bar input[type="text"] {
-    width: 300px;
+    width: 400px;
     padding: 10px;
     font-size: 16px;
-    border: 2px solid #FFD0EC;
+    border: none;
     border-radius: 5px 0 0 5px;
+    outline: none;
 }
 
 .search-bar button {
     padding: 10px;
-    background-color: #FFD0EC;
+    background-color: #FFFFFF;
     border: none;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
-/* Estilo da galeria de livros */
-.book-gallery {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    position: relative;
-}
-
-.book-container {
-    display: flex;
-    gap: 10px;
-    overflow: hidden;
-    width: 80%;
-}
-
-.book-container img {
-    width: 150px;
-    height: 200px;
-    transition: transform 0.5s ease;
-}
-
-/* Estilo das setas */
-.arrow {
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-}
-
-.left-arrow {
-    position: absolute;
-    left: 10px;
-}
-
-.right-arrow {
-    position: absolute;
-    right: 10px;
+.search-bar button img {
+    width: 20px;
+    height: 20px;
 }
