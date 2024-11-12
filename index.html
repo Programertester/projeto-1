@@ -3,62 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabeçalho Funcional</title>
+    <title>Cabeçalho Funcional com Livros</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
 </head>
 <body>
     <!-- Cabeçalho com menu, login, favoritos e carrinho -->
     <header>
-        <div id="menu-icon" class="icon">☰</div>
-        <div>Meu Site</div>
-        <div>
+        <div class="logo">📚 Meu Site de Livros</div>
+        <nav>
+            <ul class="menu">
+                <li>Início</li>
+                <li>Livros</li>
+                <li>Gêneros</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+        <div class="header-icons">
             <span id="favorite-icon" class="icon">❤</span>
             <span id="login-icon" class="icon">👤</span>
             <span id="cart-icon" class="icon">🛒<span id="cart-count" class="cart-count">0</span></span>
         </div>
     </header>
 
-    <!-- Menu Dropdown -->
-    <div id="menu" class="menu">
-        <ul>
-            <li>Home</li>
-            <li>Sobre</li>
-            <li>Contato</li>
-        </ul>
+    <!-- Barra de Pesquisa -->
+    <div class="search-bar">
+        <input type="text" placeholder="Qual será sua próxima leitura?" />
+        <button><span class="icon">🔍</span></button>
     </div>
 
-    <script>
-        // Função para alternar o menu
-        const menuIcon = document.getElementById("menu-icon");
-        const menu = document.getElementById("menu");
-        menuIcon.addEventListener("click", () => {
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-        });
+    <!-- Galeria de Livros com Setas -->
+    <section class="book-gallery">
+        <button class="arrow left-arrow" onclick="moveLeft()">⬅</button>
+        <div class="book-container">
+            <img src="livro1.jpg" alt="Livro 1">
+            <img src="livro2.jpg" alt="Livro 2">
+            <img src="livro3.jpg" alt="Livro 3">
+            <img src="livro4.jpg" alt="Livro 4">
+            <img src="livro5.jpg" alt="Livro 5">
+        </div>
+        <button class="arrow right-arrow" onclick="moveRight()">➡</button>
+    </section>
 
-        // Função para alternar o estado de favorito
-        const favoriteIcon = document.getElementById("favorite-icon");
-        let isFavorited = false;
-        favoriteIcon.addEventListener("click", () => {
-            isFavorited = !isFavorited;
-            favoriteIcon.textContent = isFavorited ? "💖" : "❤";
-            alert(isFavorited ? "Adicionado aos favoritos!" : "Removido dos favoritos!");
-        });
-
-        // Função para simular login
-        const loginIcon = document.getElementById("login-icon");
-        loginIcon.addEventListener("click", () => {
-            alert("Você clicou no ícone de login!");
-        });
-
-        // Função para adicionar itens ao carrinho
-        const cartIcon = document.getElementById("cart-icon");
-        const cartCount = document.getElementById("cart-count");
-        let itemCount = 0;
-        cartIcon.addEventListener("click", () => {
-            itemCount++;
-            cartCount.textContent = itemCount;
-            alert("Item adicionado ao carrinho! Total: " + itemCount);
-        });
-    </script>
+    <script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
 </body>
 </html>
